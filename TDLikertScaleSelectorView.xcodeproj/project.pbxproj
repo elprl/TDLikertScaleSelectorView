@@ -153,6 +153,7 @@
 		DAE498AF210B1CEB000282CA /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DAE498C5210B9F41000282CA /* TDUtils.swift */,
 				DAE498B2210B236F000282CA /* TDSelectionCategory.swift */,
 				DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */,
 				DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */,
@@ -164,7 +165,6 @@
 		DAE498C4210B477D000282CA /* ViewContainer */ = {
 			isa = PBXGroup;
 			children = (
-				DAE498C5210B9F41000282CA /* TDUtils.swift */,
 				DAE498B4210B3CA2000282CA /* TDRoundButton.swift */,
 				DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */,
 			);

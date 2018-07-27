@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol TDLikertScaleDelegate {
-    func didSelect(category cat: TDSelectionCategory)
+    func didSelect(category cat: TDSelectionCategory, tag: Int)
 }
 
 open class TDSelectionContainerView: UIView {
@@ -95,7 +95,6 @@ open class TDSelectionContainerView: UIView {
         label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5.0).isActive = true
         label.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10.0).isActive = true
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-//        label.bottomAnchor.constraint(greaterThanOrEqualTo: self.bottomAnchor, constant: 40.0).isActive = true
         label.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor, constant: 0.0).isActive = true
 
         // LEFT LINE

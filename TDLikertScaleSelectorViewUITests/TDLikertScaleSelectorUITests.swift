@@ -30,7 +30,16 @@ class TDLikertScaleSelectorUITests: XCTestCase {
 
 
     func testUIExists() {
-        XCTAssert(app.staticTexts["TDLikertScaleSelectorView"].exists)
+        
+        
+        let element = XCUIApplication().otherElements.containing(.staticText, identifier:"1. This UI is awesome.").children(matching: .other).element(boundBy: 0).children(matching: .other).element
+        element.children(matching: .other).element(boundBy: 0).children(matching: .button).element.tap()
+        element.children(matching: .other).element(boundBy: 1).children(matching: .button).element.tap()
+        element.children(matching: .other).element(boundBy: 2).children(matching: .button).element.tap()
+        element.children(matching: .other).element(boundBy: 3).children(matching: .button).element.tap()
+        element.children(matching: .other).element(boundBy: 4).children(matching: .button).element.tap()
+        
+        
         
     }
 }

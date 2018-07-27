@@ -29,16 +29,6 @@ import UIKit
         clipsToBounds = true
     }
     
-//    var isToggle: Bool = false {
-//        didSet {
-//            if isToggle {
-//                self.addTarget(self, action: Selector(("touchUpInside:")), for: .touchUpInside)
-//            } else {
-//                self.removeTarget(self, action: Selector(("touchUpInside:")), for: .touchUpInside)
-//            }
-//        }
-//    }
-    
     var backgroundColorNormal: UIColor? {
         didSet {
             backgroundColor = backgroundColorNormal
@@ -63,14 +53,12 @@ import UIKit
     override open var isHighlighted: Bool {
         didSet {
             paintBackground()
-            print("isHighlighted = \(isHighlighted)")
         }
     }
     
     override open var isSelected: Bool {
         didSet {
             paintBackground()
-            print("isSelected = \(isSelected)")
         }
     }
     

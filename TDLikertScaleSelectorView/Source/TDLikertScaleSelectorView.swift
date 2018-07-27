@@ -15,11 +15,8 @@ open class TDLikertScaleSelectorView : UIView {
     var buildConfig: TDSelectionBuildConfig?
     var delegate: TDLikertScaleDelegate?
 
-    public override init(frame: CGRect) {
+    private override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        initViews()
-        setupConstraints()
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -29,9 +26,11 @@ open class TDLikertScaleSelectorView : UIView {
         setupConstraints()
     }
     
-    convenience init?(withConfig config: TDSelectionBuildConfig, frame: CGRect) {
+    convenience init?(withConfig config: TDSelectionBuildConfig?, frame: CGRect) {
         self.init(frame: frame)
         self.buildConfig = config
+        initViews()
+        setupConstraints()
     }
     
     func initViews() {
@@ -56,7 +55,7 @@ open class TDLikertScaleSelectorView : UIView {
     
     @objc func didPressSelectorBtn(sender: UIButton) {
         if let category = TDSelectionCategory(rawValue: sender.tag) {
-            delegate?.didSelect(category: category)
+            delegate?.didSelect(category: category, tag: self.tag)
         }
         
         for case let containerView as TDSelectionContainerView in stackView.arrangedSubviews {

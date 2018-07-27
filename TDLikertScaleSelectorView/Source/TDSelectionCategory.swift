@@ -24,9 +24,9 @@ public enum TDSelectionCategory: Int, CaseIterable {
                 return NSLocalizedString("agree", comment: "Localised text for selection")
             case .neutral:
                 return NSLocalizedString("neutral", comment: "Localised text for selection")
-            case .stronglyDisagree:
-                return NSLocalizedString("disagree", comment: "Localised text for selection")
             case .disagree:
+                return NSLocalizedString("disagree", comment: "Localised text for selection")
+            case .stronglyDisagree:
                 return NSLocalizedString("strongly disagree", comment: "Localised text for selection")
             }
         }
