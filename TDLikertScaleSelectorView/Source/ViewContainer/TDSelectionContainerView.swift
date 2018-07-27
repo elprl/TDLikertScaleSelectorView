@@ -85,7 +85,7 @@ open class TDSelectionContainerView: UIView {
     func setupConstraints() {
         // BUTTON
         button.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         let width = buildConfig?.buttonRadius ?? 20.0
         button.widthAnchor.constraint(equalToConstant: width * 2).isActive = true
         button.heightAnchor.constraint(equalToConstant: width * 2).isActive = true
@@ -93,20 +93,21 @@ open class TDSelectionContainerView: UIView {
         // LABEL
         label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5.0).isActive = true
         label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5.0).isActive = true
-        label.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20.0).isActive = true
+        label.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10.0).isActive = true
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+//        label.bottomAnchor.constraint(greaterThanOrEqualTo: self.bottomAnchor, constant: 40.0).isActive = true
         label.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor, constant: 0.0).isActive = true
 
         // LEFT LINE
         lineLeft.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         lineLeft.trailingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
         lineLeft.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        lineLeft.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        lineLeft.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
 
         // RIGHT LINE
         lineRight.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         lineRight.leadingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
         lineRight.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        lineRight.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        lineRight.centerYAnchor.constraint(equalTo: button.centerYAnchor).isActive = true
     }
 }

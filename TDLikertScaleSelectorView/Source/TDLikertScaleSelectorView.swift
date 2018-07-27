@@ -38,9 +38,8 @@ open class TDLikertScaleSelectorView : UIView {
         stackView = UIStackView(frame: CGRect.zero)
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
-        stackView.alignment = .center
+        stackView.alignment = .top
         stackView.spacing = 0
-        
         
         TDSelectionCategory.allCases.forEach { cat in
             let containerView = TDSelectionContainerView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), category: cat, config: buildConfig)
@@ -52,13 +51,16 @@ open class TDLikertScaleSelectorView : UIView {
     }
     
     func setupConstraints() {
-        // stackView
-        stackView.pin(to: self)        
+        stackView.pin(to: self)
     }
     
     @objc func didPressSelectorBtn(sender: UIButton) {
         if let category = TDSelectionCategory(rawValue: sender.tag) {
             delegate?.didSelect(category: category)
+        }
+        
+        for case let containerView as TDSelectionContainerView in stackView.arrangedSubviews {
+                containerView.button.isSelected = containerView.button == sender
         }
     }
 }

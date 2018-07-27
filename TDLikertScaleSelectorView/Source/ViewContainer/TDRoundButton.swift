@@ -29,15 +29,15 @@ import UIKit
         clipsToBounds = true
     }
     
-    var isToggle: Bool = false {
-        didSet {
-            if isToggle {
-                self.addTarget(self, action: Selector(("touchUpInside:")), for: .touchUpInside)
-            } else {
-                self.removeTarget(self, action: Selector(("touchUpInside:")), for: .touchUpInside)
-            }
-        }
-    }
+//    var isToggle: Bool = false {
+//        didSet {
+//            if isToggle {
+//                self.addTarget(self, action: Selector(("touchUpInside:")), for: .touchUpInside)
+//            } else {
+//                self.removeTarget(self, action: Selector(("touchUpInside:")), for: .touchUpInside)
+//            }
+//        }
+//    }
     
     var backgroundColorNormal: UIColor? {
         didSet {
@@ -62,21 +62,28 @@ import UIKit
     
     override open var isHighlighted: Bool {
         didSet {
-            switch (isHighlighted, isSelected) {
-            case (true, false):
-                backgroundColor = _backgroundColorHighlighted
-            case (true, true):
-                backgroundColor = _backgroundColorHighlightedSelected
-            case (false, true):
-                backgroundColor = _backgroundColorSelected
-            default:
-                backgroundColor = backgroundColorNormal
-            }
+            paintBackground()
+            print("isHighlighted = \(isHighlighted)")
         }
     }
     
-    func touchUpInside(sender: UIButton!) {
-        isSelected = !isSelected
+    override open var isSelected: Bool {
+        didSet {
+            paintBackground()
+            print("isSelected = \(isSelected)")
+        }
     }
     
+    private func paintBackground() {
+        switch (isHighlighted, isSelected) {
+        case (true, false):
+            backgroundColor = _backgroundColorHighlighted
+        case (true, true):
+            backgroundColor = _backgroundColorHighlightedSelected
+        case (false, true):
+            backgroundColor = _backgroundColorSelected
+        default:
+            backgroundColor = backgroundColorNormal
+        }
+    }
 }
