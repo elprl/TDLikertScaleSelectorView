@@ -43,10 +43,9 @@ open class TDLikertScaleSelectorView : UIView {
         stackView.backgroundColor = .blue
         
         TDSelectionCategory.allCases.forEach { cat in
-            if let containerView = TDSelectionContainerView(withConfig: buildConfig, category: cat, frame: CGRect.zero) {
-                containerView.translatesAutoresizingMaskIntoConstraints = false
-                stackView.addArrangedSubview(containerView)
-            }
+            let containerView = TDSelectionContainerView(frame: CGRect.zero, category: cat, config: buildConfig)
+            containerView.translatesAutoresizingMaskIntoConstraints = false
+            stackView.addArrangedSubview(containerView)
         }
     }
     

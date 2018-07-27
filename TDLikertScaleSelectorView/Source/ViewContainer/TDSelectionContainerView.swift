@@ -11,14 +11,17 @@ import UIKit
 
 open class TDSelectionContainerView: UIView {
     var buildConfig: TDSelectionBuildConfig?
-    
+    var category: TDSelectionCategory?
+
     let label = UILabel()
     let button = TDRoundButton()
     let lineLeft = UIView()
     let lineRight = UIView()
-    var category = TDSelectionCategory.stronglyAgree
 
-    public override init(frame: CGRect) {
+    init(frame: CGRect, category: TDSelectionCategory?, config: TDSelectionBuildConfig?) {
+        self.buildConfig = config
+        self.category = category
+        
         super.init(frame: frame)
         
         initViews()
@@ -33,18 +36,14 @@ open class TDSelectionContainerView: UIView {
         addViews()
         setupConstraints()
     }
+
     
-    convenience init?(withConfig config: TDSelectionBuildConfig?, category: TDSelectionCategory, frame: CGRect) {
-        self.init(frame: frame)
-        self.buildConfig = config
-        self.category = category
-    }
     
     func initViews() {
         self.backgroundColor = .yellow
         self.translatesAutoresizingMaskIntoConstraints = false
 
-        label.text = category.localizedName
+        label.text = category?.localizedName
         label.font = buildConfig?.font ?? UIFont.systemFont(ofSize: 17.0)
         label.textColor = buildConfig?.textColor ?? .black
         label.translatesAutoresizingMaskIntoConstraints = false
