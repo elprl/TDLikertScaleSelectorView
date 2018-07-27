@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jVL-WI-SlF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,39 +9,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Fdc-8g-mCZ">
+            <objects>
+                <navigationController id="jVL-WI-SlF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqD-tW-rfK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fFo-Yq-gc1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WfZ-wu-ybf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="116"/>
+        </scene>
+        <!--My Questionnaire-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TDLikertScaleSelectorView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Questionnaire" id="BYZ-38-t0r" customClass="ViewController" customModule="TDLikertScaleSelectorView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. This UI is awesome." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-Be-5X8" userLabel="Question">
-                                <rect key="frame" x="20" y="40" width="168" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q1. President Trump is doing good work." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-Be-5X8" userLabel="Question">
+                                <rect key="frame" x="20" y="84" width="313" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPg-dy-89a" customClass="TDLikertScaleSelectorView" customModule="TDLikertScaleSelectorView" customModuleProvider="target">
-                                <rect key="frame" x="20" y="80.5" width="335" height="100"/>
+                                <rect key="frame" x="10" y="113.5" width="355" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="KhX-LN-mCb"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q2. A trained monkey could do better." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxA-Nu-Aj0" userLabel="Question">
+                                <rect key="frame" x="20" y="233.5" width="292.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q3. There was no COLLUSION with Russia." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qi-H0-bM0" userLabel="Question">
+                                <rect key="frame" x="20" y="383" width="329.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPg-dy-89a" secondAttribute="trailing" constant="20" id="DyC-K8-t0L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fPg-dy-89a" secondAttribute="trailing" constant="10" id="DyC-K8-t0L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JxA-Nu-Aj0" secondAttribute="trailing" symbolic="YES" id="EL4-wR-W8p"/>
+                            <constraint firstItem="JxA-Nu-Aj0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pgb-jH-Gge"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wVe-Be-5X8" secondAttribute="trailing" symbolic="YES" id="c6R-nV-Egw"/>
-                            <constraint firstItem="fPg-dy-89a" firstAttribute="top" secondItem="wVe-Be-5X8" secondAttribute="bottom" constant="20" id="eSM-K0-XnO"/>
-                            <constraint firstItem="fPg-dy-89a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ego-bs-Atb"/>
+                            <constraint firstItem="fPg-dy-89a" firstAttribute="top" secondItem="wVe-Be-5X8" secondAttribute="bottom" constant="10" id="eSM-K0-XnO"/>
+                            <constraint firstItem="fPg-dy-89a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ego-bs-Atb"/>
                             <constraint firstItem="wVe-Be-5X8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gfg-1n-62P"/>
                             <constraint firstItem="wVe-Be-5X8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nmG-bn-gHm"/>
+                            <constraint firstItem="3Qi-H0-bM0" firstAttribute="top" secondItem="JxA-Nu-Aj0" secondAttribute="bottom" constant="130" id="nuN-Nf-NP7"/>
+                            <constraint firstItem="JxA-Nu-Aj0" firstAttribute="top" secondItem="wVe-Be-5X8" secondAttribute="bottom" constant="130" id="s82-dT-hN7"/>
+                            <constraint firstItem="3Qi-H0-bM0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wYT-M2-jZE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="My Questionnaire" id="rI9-ej-qCU"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

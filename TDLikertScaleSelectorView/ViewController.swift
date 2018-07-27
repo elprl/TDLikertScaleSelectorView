@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint.activate([
                 likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
                 likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 275),
                 likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
                 ])
         }
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint.activate([
                 likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
                 likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 400),
+                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 420),
                 likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
                 ])
         }

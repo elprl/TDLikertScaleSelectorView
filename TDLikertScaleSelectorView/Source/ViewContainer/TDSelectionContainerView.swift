@@ -86,7 +86,7 @@ open class TDSelectionContainerView: UIView {
         // BUTTON
         button.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        let width = buildConfig?.buttonRadius ?? 20.0
+        let width = buildConfig?.buttonRadius ?? 22.0
         button.widthAnchor.constraint(equalToConstant: width * 2).isActive = true
         button.heightAnchor.constraint(equalToConstant: width * 2).isActive = true
 
