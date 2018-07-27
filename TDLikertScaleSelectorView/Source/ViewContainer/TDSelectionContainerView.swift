@@ -50,9 +50,14 @@ open class TDSelectionContainerView: UIView {
     
     
     func initViews() {
-        label.text = buildConfig?.labelName
+        self.backgroundColor = .yellow
+        self.translatesAutoresizingMaskIntoConstraints = false
+
+        label.text = buildConfig?.labelName ?? "strongly agree"
         label.font = buildConfig?.font ?? UIFont.systemFont(ofSize: 17.0)
         label.textColor = buildConfig?.textColor ?? .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
         
         button.backgroundColorNormal = buildConfig?.backgroundColorNormal
         button.backgroundColorHighlighted = buildConfig?.backgroundColorHighlighted
@@ -61,9 +66,13 @@ open class TDSelectionContainerView: UIView {
         button.borderColor = buildConfig?.borderColor ?? .black
         button.borderWidth = buildConfig?.borderWidth ?? 2.0
         button.backgroundColor = .red
+        button.translatesAutoresizingMaskIntoConstraints = false
         
         lineLeft.backgroundColor = buildConfig?.lineColor ?? .black
+        lineLeft.translatesAutoresizingMaskIntoConstraints = false
+
         lineRight.backgroundColor = buildConfig?.lineColor ?? .black
+        lineRight.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func addViews() {
@@ -78,44 +87,32 @@ open class TDSelectionContainerView: UIView {
         let margins = self.layoutMarginsGuide
         
         // BUTTON
-        // centre button in parent
         button.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
         button.centerYAnchor.constraint(equalTo: margins.centerYAnchor).isActive = true
         button.widthAnchor.constraint(equalToConstant: 40.0).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
 
         // LABEL
-        // Pin the leading edge of myView to the margin's leading edge
         label.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        // Pin the trailing edge of myView to the margin's trailing edge
         label.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        // pin label under button
         label.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20.0).isActive = true
         label.centerXAnchor.constraint(equalTo: margins.centerXAnchor).isActive = true
-//        label.widthAnchor.constraint(equalTo: margins.widthAnchor, multiplier: 1, constant: 0)
 
-        // LINES
+        // LEFT LINE
         lineLeft.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-        // Pin the trailing edge of lineLeft to buttons leading edge
         lineLeft.trailingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
         lineLeft.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         lineLeft.centerYAnchor.constraint(equalTo: margins.centerYAnchor).isActive = true
 
+        // RIGHT LINE
         lineRight.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-        // Pin the leading edge of lineRight to buttons trailing edge
         lineRight.leadingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
         lineRight.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
         lineRight.centerYAnchor.constraint(equalTo: margins.centerYAnchor).isActive = true
-
-//        let views = ["label" : label, "button": button, "lineLeft": lineLeft, "lineRight": lineRight]
-//        let hFormatString = "H:|-[lineLeft]-[button(==40)]-[lineRight]-|"
-//        let vFormatString = "V:|-[button(==40)]-20-[label]-|"
-//
-//        let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hFormatString, options: .alignAllCenterY, metrics: nil, views: views)
-//        let vConstraints = NSLayoutConstraint.constraints(withVisualFormat: vFormatString, options: .alignAllCenterX, metrics: nil, views: views)
-//
-//        NSLayoutConstraint.activate(hConstraints)
-//        NSLayoutConstraint.activate(vConstraints)
+        
+        // Inform the contraints engine to update the constraints
+        self.setNeedsUpdateConstraints()
     }
+
 
 }
