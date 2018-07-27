@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol TDLikertScaleDelegate {
+    func didSelect(category cat: TDSelectionCategory)
+}
+
 open class TDSelectionContainerView: UIView {
     var buildConfig: TDSelectionBuildConfig?
     var category: TDSelectionCategory?
@@ -38,13 +42,12 @@ open class TDSelectionContainerView: UIView {
     }
 
     
-    
     func initViews() {
         self.backgroundColor = .yellow
         self.translatesAutoresizingMaskIntoConstraints = false
 
         label.text = category?.localizedName
-        label.font = buildConfig?.font ?? UIFont.systemFont(ofSize: 17.0)
+        label.font = buildConfig?.font ?? UIFont.systemFont(ofSize: 16.0)
         label.textColor = buildConfig?.textColor ?? .black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
@@ -57,8 +60,20 @@ open class TDSelectionContainerView: UIView {
         button.borderColor = buildConfig?.borderColor ?? .black
         button.borderWidth = buildConfig?.borderWidth ?? 2.0
         button.backgroundColor = .red
+        button.tag = category?.buttonTag ?? 0
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        switch category {
+        case .some(.stronglyAgree):
+            lineLeft.isHidden = true
+            lineRight.isHidden = false
+        case .some(.stronglyDisagree):
+            lineLeft.isHidden = false
+            lineRight.isHidden = true
+        default:
+            lineLeft.isHidden = false
+            lineRight.isHidden = false
+        }
         lineLeft.backgroundColor = buildConfig?.lineColor ?? .black
         lineLeft.translatesAutoresizingMaskIntoConstraints = false
 
@@ -68,9 +83,9 @@ open class TDSelectionContainerView: UIView {
     
     func addViews() {
         self.addSubview(label)
-        self.addSubview(button)
         self.addSubview(lineLeft)
         self.addSubview(lineRight)
+        self.addSubview(button)
     }
     
     func setupConstraints() {
@@ -81,8 +96,8 @@ open class TDSelectionContainerView: UIView {
         button.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
 
         // LABEL
-        label.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        label.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5.0).isActive = true
+        label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5.0).isActive = true
         label.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20.0).isActive = true
         label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 

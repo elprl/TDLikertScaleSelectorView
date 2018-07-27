@@ -12,6 +12,7 @@ import UIKit
 open class TDLikertScaleSelectorView : UIView {
     let stackView = UIStackView()
     var buildConfig: TDSelectionBuildConfig?
+    var delegate: TDLikertScaleDelegate?
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +36,7 @@ open class TDLikertScaleSelectorView : UIView {
     func initViews() {
         self.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isUserInteractionEnabled = true
         
         self.addSubview(stackView)
 
@@ -44,6 +46,7 @@ open class TDLikertScaleSelectorView : UIView {
         
         TDSelectionCategory.allCases.forEach { cat in
             let containerView = TDSelectionContainerView(frame: CGRect.zero, category: cat, config: buildConfig)
+            containerView.button.addTarget(self, action: #selector(TDLikertScaleSelectorView.didPressSelectorBtn(sender:)), for: .touchUpInside)
             containerView.translatesAutoresizingMaskIntoConstraints = false
             stackView.addArrangedSubview(containerView)
         }
@@ -55,5 +58,9 @@ open class TDLikertScaleSelectorView : UIView {
         stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         stackView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+    }
+    
+    @objc func didPressSelectorBtn(sender: UIButton) {
+        delegate?.didSelect(category: TDSelectionCategory.category(fromTag: sender.tag))
     }
 }

@@ -17,28 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. This UI is awesome." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-Be-5X8">
-                                <rect key="frame" x="16" y="203" width="167.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. This UI is awesome." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVe-Be-5X8" userLabel="Question">
+                                <rect key="frame" x="20" y="40" width="167.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7eQ-yM-cQj" customClass="TDLikertScaleSelectorView" customModule="TDLikertScaleSelectorView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="243.5" width="375" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="80.5" width="335" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="4Nk-5D-eo8"/>
+                                    <constraint firstAttribute="height" constant="100" id="uFu-I7-7wN"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7eQ-yM-cQj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Lya-2d-Vri"/>
-                            <constraint firstItem="7eQ-yM-cQj" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TNw-YB-1KD"/>
-                            <constraint firstItem="7eQ-yM-cQj" firstAttribute="top" secondItem="wVe-Be-5X8" secondAttribute="bottom" constant="20" id="UKU-xH-zkg"/>
-                            <constraint firstItem="7eQ-yM-cQj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="boI-5U-2Ic"/>
-                            <constraint firstItem="wVe-Be-5X8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gfg-1n-62P"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wVe-Be-5X8" secondAttribute="trailing" symbolic="YES" id="pTn-ih-2Uh"/>
+                            <constraint firstItem="7eQ-yM-cQj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Hm-nH-i5h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7eQ-yM-cQj" secondAttribute="trailing" constant="20" id="FL1-JU-yfS"/>
+                            <constraint firstItem="7eQ-yM-cQj" firstAttribute="top" secondItem="wVe-Be-5X8" secondAttribute="bottom" constant="20" id="btX-oY-iDG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wVe-Be-5X8" secondAttribute="trailing" symbolic="YES" id="c6R-nV-Egw"/>
+                            <constraint firstItem="wVe-Be-5X8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gfg-1n-62P"/>
+                            <constraint firstItem="wVe-Be-5X8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nmG-bn-gHm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
