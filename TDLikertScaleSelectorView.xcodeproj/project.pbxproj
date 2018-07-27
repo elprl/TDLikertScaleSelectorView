@@ -14,6 +14,21 @@
 		DAE4988C210B1CB3000282CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE4988A210B1CB3000282CA /* LaunchScreen.storyboard */; };
 		DAE49897210B1CB3000282CA /* TDLikertScaleSelectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE49896210B1CB3000282CA /* TDLikertScaleSelectorTests.swift */; };
 		DAE498A2210B1CB3000282CA /* TDLikertScaleSelectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498A1210B1CB3000282CA /* TDLikertScaleSelectorUITests.swift */; };
+		DAE498B1210B2313000282CA /* TDLikertScaleSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */; };
+		DAE498B3210B236F000282CA /* TDSelectionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B2210B236F000282CA /* TDSelectionCategory.swift */; };
+		DAE498B5210B3CA2000282CA /* TDRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B4210B3CA2000282CA /* TDRoundButton.swift */; };
+		DAE498B6210B3CA2000282CA /* TDRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B4210B3CA2000282CA /* TDRoundButton.swift */; };
+		DAE498B7210B3CA2000282CA /* TDRoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B4210B3CA2000282CA /* TDRoundButton.swift */; };
+		DAE498B8210B3CA6000282CA /* TDSelectionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B2210B236F000282CA /* TDSelectionCategory.swift */; };
+		DAE498B9210B3CA6000282CA /* TDSelectionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B2210B236F000282CA /* TDSelectionCategory.swift */; };
+		DAE498BA210B3CA9000282CA /* TDLikertScaleSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */; };
+		DAE498BB210B3CAA000282CA /* TDLikertScaleSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */; };
+		DAE498BD210B4388000282CA /* TDSelectionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */; };
+		DAE498BE210B4388000282CA /* TDSelectionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */; };
+		DAE498BF210B4388000282CA /* TDSelectionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */; };
+		DAE498C1210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */; };
+		DAE498C2210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */; };
+		DAE498C3210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +49,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DAE4987E210B1CB1000282CA /* TDLikertScaleSelector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDLikertScaleSelector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE4987E210B1CB1000282CA /* TDLikertScaleSelectorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDLikertScaleSelectorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE49881210B1CB1000282CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE49883210B1CB1000282CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAE49886210B1CB1000282CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE49888210B1CB3000282CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE4988B210B1CB3000282CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE4988D210B1CB3000282CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAE49892210B1CB3000282CA /* TDLikertScaleSelectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDLikertScaleSelectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE49892210B1CB3000282CA /* TDLikertScaleSelectorViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDLikertScaleSelectorViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE49896210B1CB3000282CA /* TDLikertScaleSelectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLikertScaleSelectorTests.swift; sourceTree = "<group>"; };
 		DAE49898210B1CB3000282CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAE4989D210B1CB3000282CA /* TDLikertScaleSelectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDLikertScaleSelectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAE4989D210B1CB3000282CA /* TDLikertScaleSelectorViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDLikertScaleSelectorViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE498A1210B1CB3000282CA /* TDLikertScaleSelectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLikertScaleSelectorUITests.swift; sourceTree = "<group>"; };
 		DAE498A3210B1CB3000282CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDLikertScaleSelectorView.swift; sourceTree = "<group>"; };
+		DAE498B2210B236F000282CA /* TDSelectionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSelectionCategory.swift; sourceTree = "<group>"; };
+		DAE498B4210B3CA2000282CA /* TDRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDRoundButton.swift; sourceTree = "<group>"; };
+		DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSelectionContainerView.swift; sourceTree = "<group>"; };
+		DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSelectionBuildConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +97,9 @@
 		DAE49875210B1CB1000282CA = {
 			isa = PBXGroup;
 			children = (
-				DAE49880210B1CB1000282CA /* TDLikertScaleSelector */,
-				DAE49895210B1CB3000282CA /* TDLikertScaleSelectorTests */,
-				DAE498A0210B1CB3000282CA /* TDLikertScaleSelectorUITests */,
+				DAE49880210B1CB1000282CA /* TDLikertScaleSelectorView */,
+				DAE49895210B1CB3000282CA /* TDLikertScaleSelectorViewTests */,
+				DAE498A0210B1CB3000282CA /* TDLikertScaleSelectorViewUITests */,
 				DAE4987F210B1CB1000282CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,16 +107,17 @@
 		DAE4987F210B1CB1000282CA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAE4987E210B1CB1000282CA /* TDLikertScaleSelector.app */,
-				DAE49892210B1CB3000282CA /* TDLikertScaleSelectorTests.xctest */,
-				DAE4989D210B1CB3000282CA /* TDLikertScaleSelectorUITests.xctest */,
+				DAE4987E210B1CB1000282CA /* TDLikertScaleSelectorView.app */,
+				DAE49892210B1CB3000282CA /* TDLikertScaleSelectorViewTests.xctest */,
+				DAE4989D210B1CB3000282CA /* TDLikertScaleSelectorViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DAE49880210B1CB1000282CA /* TDLikertScaleSelector */ = {
+		DAE49880210B1CB1000282CA /* TDLikertScaleSelectorView */ = {
 			isa = PBXGroup;
 			children = (
+				DAE498AF210B1CEB000282CA /* Source */,
 				DAE49881210B1CB1000282CA /* AppDelegate.swift */,
 				DAE49883210B1CB1000282CA /* ViewController.swift */,
 				DAE49885210B1CB1000282CA /* Main.storyboard */,
@@ -104,33 +125,53 @@
 				DAE4988A210B1CB3000282CA /* LaunchScreen.storyboard */,
 				DAE4988D210B1CB3000282CA /* Info.plist */,
 			);
-			path = TDLikertScaleSelector;
+			path = TDLikertScaleSelectorView;
 			sourceTree = "<group>";
 		};
-		DAE49895210B1CB3000282CA /* TDLikertScaleSelectorTests */ = {
+		DAE49895210B1CB3000282CA /* TDLikertScaleSelectorViewTests */ = {
 			isa = PBXGroup;
 			children = (
 				DAE49896210B1CB3000282CA /* TDLikertScaleSelectorTests.swift */,
 				DAE49898210B1CB3000282CA /* Info.plist */,
 			);
-			path = TDLikertScaleSelectorTests;
+			path = TDLikertScaleSelectorViewTests;
 			sourceTree = "<group>";
 		};
-		DAE498A0210B1CB3000282CA /* TDLikertScaleSelectorUITests */ = {
+		DAE498A0210B1CB3000282CA /* TDLikertScaleSelectorViewUITests */ = {
 			isa = PBXGroup;
 			children = (
 				DAE498A1210B1CB3000282CA /* TDLikertScaleSelectorUITests.swift */,
 				DAE498A3210B1CB3000282CA /* Info.plist */,
 			);
-			path = TDLikertScaleSelectorUITests;
+			path = TDLikertScaleSelectorViewUITests;
+			sourceTree = "<group>";
+		};
+		DAE498AF210B1CEB000282CA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DAE498C4210B477D000282CA /* ViewContainer */,
+				DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */,
+				DAE498B2210B236F000282CA /* TDSelectionCategory.swift */,
+				DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DAE498C4210B477D000282CA /* ViewContainer */ = {
+			isa = PBXGroup;
+			children = (
+				DAE498B4210B3CA2000282CA /* TDRoundButton.swift */,
+				DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */,
+			);
+			path = ViewContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAE4987D210B1CB1000282CA /* TDLikertScaleSelector */ = {
+		DAE4987D210B1CB1000282CA /* TDLikertScaleSelectorView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE498A6210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelector" */;
+			buildConfigurationList = DAE498A6210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorView" */;
 			buildPhases = (
 				DAE4987A210B1CB1000282CA /* Sources */,
 				DAE4987B210B1CB1000282CA /* Frameworks */,
@@ -140,14 +181,14 @@
 			);
 			dependencies = (
 			);
-			name = TDLikertScaleSelector;
+			name = TDLikertScaleSelectorView;
 			productName = TDLikertScaleSelector;
-			productReference = DAE4987E210B1CB1000282CA /* TDLikertScaleSelector.app */;
+			productReference = DAE4987E210B1CB1000282CA /* TDLikertScaleSelectorView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DAE49891210B1CB3000282CA /* TDLikertScaleSelectorTests */ = {
+		DAE49891210B1CB3000282CA /* TDLikertScaleSelectorViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE498A9210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorTests" */;
+			buildConfigurationList = DAE498A9210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorViewTests" */;
 			buildPhases = (
 				DAE4988E210B1CB3000282CA /* Sources */,
 				DAE4988F210B1CB3000282CA /* Frameworks */,
@@ -158,14 +199,14 @@
 			dependencies = (
 				DAE49894210B1CB3000282CA /* PBXTargetDependency */,
 			);
-			name = TDLikertScaleSelectorTests;
+			name = TDLikertScaleSelectorViewTests;
 			productName = TDLikertScaleSelectorTests;
-			productReference = DAE49892210B1CB3000282CA /* TDLikertScaleSelectorTests.xctest */;
+			productReference = DAE49892210B1CB3000282CA /* TDLikertScaleSelectorViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DAE4989C210B1CB3000282CA /* TDLikertScaleSelectorUITests */ = {
+		DAE4989C210B1CB3000282CA /* TDLikertScaleSelectorViewUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAE498AC210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorUITests" */;
+			buildConfigurationList = DAE498AC210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorViewUITests" */;
 			buildPhases = (
 				DAE49899210B1CB3000282CA /* Sources */,
 				DAE4989A210B1CB3000282CA /* Frameworks */,
@@ -176,9 +217,9 @@
 			dependencies = (
 				DAE4989F210B1CB3000282CA /* PBXTargetDependency */,
 			);
-			name = TDLikertScaleSelectorUITests;
+			name = TDLikertScaleSelectorViewUITests;
 			productName = TDLikertScaleSelectorUITests;
-			productReference = DAE4989D210B1CB3000282CA /* TDLikertScaleSelectorUITests.xctest */;
+			productReference = DAE4989D210B1CB3000282CA /* TDLikertScaleSelectorViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -204,7 +245,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAE49879210B1CB1000282CA /* Build configuration list for PBXProject "TDLikertScaleSelector" */;
+			buildConfigurationList = DAE49879210B1CB1000282CA /* Build configuration list for PBXProject "TDLikertScaleSelectorView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -217,9 +258,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAE4987D210B1CB1000282CA /* TDLikertScaleSelector */,
-				DAE49891210B1CB3000282CA /* TDLikertScaleSelectorTests */,
-				DAE4989C210B1CB3000282CA /* TDLikertScaleSelectorUITests */,
+				DAE4987D210B1CB1000282CA /* TDLikertScaleSelectorView */,
+				DAE49891210B1CB3000282CA /* TDLikertScaleSelectorViewTests */,
+				DAE4989C210B1CB3000282CA /* TDLikertScaleSelectorViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,8 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE498B3210B236F000282CA /* TDSelectionCategory.swift in Sources */,
+				DAE498BD210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
+				DAE498B5210B3CA2000282CA /* TDRoundButton.swift in Sources */,
 				DAE49884210B1CB1000282CA /* ViewController.swift in Sources */,
 				DAE49882210B1CB1000282CA /* AppDelegate.swift in Sources */,
+				DAE498C1210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */,
+				DAE498B1210B2313000282CA /* TDLikertScaleSelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE498B6210B3CA2000282CA /* TDRoundButton.swift in Sources */,
+				DAE498BA210B3CA9000282CA /* TDLikertScaleSelectorView.swift in Sources */,
 				DAE49897210B1CB3000282CA /* TDLikertScaleSelectorTests.swift in Sources */,
+				DAE498BE210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
+				DAE498B8210B3CA6000282CA /* TDSelectionCategory.swift in Sources */,
+				DAE498C2210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE498B7210B3CA2000282CA /* TDRoundButton.swift in Sources */,
+				DAE498BB210B3CAA000282CA /* TDLikertScaleSelectorView.swift in Sources */,
 				DAE498A2210B1CB3000282CA /* TDLikertScaleSelectorUITests.swift in Sources */,
+				DAE498BF210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
+				DAE498B9210B3CA6000282CA /* TDSelectionCategory.swift in Sources */,
+				DAE498C3210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +338,12 @@
 /* Begin PBXTargetDependency section */
 		DAE49894210B1CB3000282CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAE4987D210B1CB1000282CA /* TDLikertScaleSelector */;
+			target = DAE4987D210B1CB1000282CA /* TDLikertScaleSelectorView */;
 			targetProxy = DAE49893210B1CB3000282CA /* PBXContainerItemProxy */;
 		};
 		DAE4989F210B1CB3000282CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DAE4987D210B1CB1000282CA /* TDLikertScaleSelector */;
+			target = DAE4987D210B1CB1000282CA /* TDLikertScaleSelectorView */;
 			targetProxy = DAE4989E210B1CB3000282CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -434,12 +490,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY258SLJLV;
-				INFOPLIST_FILE = TDLikertScaleSelector/Info.plist;
+				INFOPLIST_FILE = TDLikertScaleSelectorView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelector;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,12 +508,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY258SLJLV;
-				INFOPLIST_FILE = TDLikertScaleSelector/Info.plist;
+				INFOPLIST_FILE = TDLikertScaleSelectorView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelector;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,17 +527,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY258SLJLV;
-				INFOPLIST_FILE = TDLikertScaleSelectorTests/Info.plist;
+				INFOPLIST_FILE = TDLikertScaleSelectorViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDLikertScaleSelector.app/TDLikertScaleSelector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDLikertScaleSelectorView.app/TDLikertScaleSelectorView";
 			};
 			name = Debug;
 		};
@@ -492,17 +548,17 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY258SLJLV;
-				INFOPLIST_FILE = TDLikertScaleSelectorTests/Info.plist;
+				INFOPLIST_FILE = TDLikertScaleSelectorViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDLikertScaleSelector.app/TDLikertScaleSelector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDLikertScaleSelectorView.app/TDLikertScaleSelectorView";
 			};
 			name = Release;
 		};
@@ -512,17 +568,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY258SLJLV;
-				INFOPLIST_FILE = TDLikertScaleSelectorUITests/Info.plist;
+				INFOPLIST_FILE = TDLikertScaleSelectorViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TDLikertScaleSelector;
+				TEST_TARGET_NAME = TDLikertScaleSelectorView;
 			};
 			name = Debug;
 		};
@@ -532,24 +588,24 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WY258SLJLV;
-				INFOPLIST_FILE = TDLikertScaleSelectorUITests/Info.plist;
+				INFOPLIST_FILE = TDLikertScaleSelectorViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tapdigital.TDLikertScaleSelectorViewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TDLikertScaleSelector;
+				TEST_TARGET_NAME = TDLikertScaleSelectorView;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAE49879210B1CB1000282CA /* Build configuration list for PBXProject "TDLikertScaleSelector" */ = {
+		DAE49879210B1CB1000282CA /* Build configuration list for PBXProject "TDLikertScaleSelectorView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE498A4210B1CB3000282CA /* Debug */,
@@ -558,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE498A6210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelector" */ = {
+		DAE498A6210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE498A7210B1CB3000282CA /* Debug */,
@@ -567,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE498A9210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorTests" */ = {
+		DAE498A9210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE498AA210B1CB3000282CA /* Debug */,
@@ -576,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAE498AC210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorUITests" */ = {
+		DAE498AC210B1CB3000282CA /* Build configuration list for PBXNativeTarget "TDLikertScaleSelectorViewUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAE498AD210B1CB3000282CA /* Debug */,

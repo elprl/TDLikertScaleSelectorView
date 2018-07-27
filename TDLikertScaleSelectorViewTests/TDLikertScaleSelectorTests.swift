@@ -7,21 +7,25 @@
 //
 
 import XCTest
-@testable import TDLikertScaleSelector
+@testable import TDLikertScaleSelectorView
 
-class TDLikertScaleSelectorTests: XCTestCase {
+class TDLikertScaleSelectorViewTests: XCTestCase {
+    let viewClass = TDLikertScaleSelectorView()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testViewIsUI() {
+        XCTAssert(viewClass.isKind(of: UIView.self))
+    }
+
+    func testLikertCategories() {
+        XCTAssertEqual(TDSelectionCategory.allCases.count, 5, "has the 5 selection cases")
     }
 
     func testPerformanceExample() {
