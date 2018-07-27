@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         }
         
         var config = MyBuildConfig()
-        if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect(x: 10, y: 200, width: 355, height: 100)) {
+        if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
             likertView.delegate = self
             likertView.tag = 2
             self.view.addSubviewForAutoLayout(likertView)
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         config.lineColor = UIColor.clear
         config.borderColor = UIColor.clear
 
-        if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect(x: 10, y: 400, width: 355, height: 100)) {
+        if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
             likertView.delegate = self
             likertView.tag = 3
             self.view.addSubviewForAutoLayout(likertView)
