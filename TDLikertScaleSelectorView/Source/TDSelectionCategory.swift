@@ -14,4 +14,10 @@ public enum TDSelectionCategory: String, CaseIterable {
     case neutral = "neutral"
     case disagree = "disagree"
     case stronglyDisagree = "strongly disagree"
+    
+    var localizedName: String {
+        get {
+            return NSLocalizedString(self.rawValue, comment: "Localised text for selection")
+        }
+    }
 }

@@ -12,7 +12,6 @@ import UIKit
 protocol TDSelectionBuildConfig {
     var font: UIFont? { get }
     var textColor: UIColor? { get }
-    var labelName: String? { get }
     
     var backgroundColorNormal: UIColor? { get }
     var backgroundColorHighlighted: UIColor? { get }
