@@ -11,11 +11,6 @@ This library provides a UI Control for displaying a Likert Scale question
 - [x] Ability to skin the UI with fonts, colours, etc
 - [x] Ability to add the control via Interface Builder or programmatically
 
-## Supported Image Formats
-
-- Image formats supported by UIImage (JPEG, PNG, ...), including GIF
-- WebP format, including animated WebP (use the `WebP` subspec)
-
 ## Requirements
 
 - iOS 11.0 or later
@@ -24,7 +19,6 @@ This library provides a UI Control for displaying a Likert Scale question
 
 ## How To Use
 
-* Swift
 
 ```swift
 import TDLikertScaleSelectorView
