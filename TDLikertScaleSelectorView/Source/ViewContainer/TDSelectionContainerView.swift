@@ -17,7 +17,6 @@ open class TDSelectionContainerView: UIView {
     var buildConfig: TDSelectionBuildConfig?
     var category: TDSelectionCategory?
 
-    var contentView: UIView!
     var label: UILabel!
     var button: TDRoundButton!
     var lineLeft: UIView!
@@ -43,9 +42,6 @@ open class TDSelectionContainerView: UIView {
     }
     
     func initViews() {
-        contentView = UIView()
-        contentView.backgroundColor = .purple
-        
         label = UILabel()
         label.text = category?.localizedName
         label.font = buildConfig?.font ?? UIFont.systemFont(ofSize: 16.0)
@@ -80,42 +76,37 @@ open class TDSelectionContainerView: UIView {
     }
     
     func addViews() {
-        self.addSubviewForAutoLayout(contentView)
-        
-        contentView.addSubviewForAutoLayout(label)
-        contentView.addSubviewForAutoLayout(lineLeft)
-        contentView.addSubviewForAutoLayout(lineRight)
-        contentView.addSubviewForAutoLayout(button)
+        self.addSubviewForAutoLayout(label)
+        self.addSubviewForAutoLayout(lineLeft)
+        self.addSubviewForAutoLayout(lineRight)
+        self.addSubviewForAutoLayout(button)
     }
     
     func setupConstraints() {
-        // PARENT CONTENT VIEW
-        contentView.pin(to: self)
-        
         // BUTTON
-        button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        button.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         let width = buildConfig?.buttonRadius ?? 20.0
         button.widthAnchor.constraint(equalToConstant: width * 2).isActive = true
         button.heightAnchor.constraint(equalToConstant: width * 2).isActive = true
 
         // LABEL
-        label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5.0).isActive = true
-        label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5.0).isActive = true
+        label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5.0).isActive = true
+        label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5.0).isActive = true
         label.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20.0).isActive = true
-        label.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        label.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: 0.0).isActive = true
+        label.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        label.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor, constant: 0.0).isActive = true
 
         // LEFT LINE
         lineLeft.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         lineLeft.trailingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
-        lineLeft.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-        lineLeft.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        lineLeft.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        lineLeft.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 
         // RIGHT LINE
         lineRight.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         lineRight.leadingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
-        lineRight.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-        lineRight.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        lineRight.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        lineRight.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
 }

@@ -41,6 +41,7 @@ open class TDLikertScaleSelectorView : UIView {
         stackView.alignment = .center
         stackView.spacing = 0
         
+        
         TDSelectionCategory.allCases.forEach { cat in
             let containerView = TDSelectionContainerView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), category: cat, config: buildConfig)
             containerView.button.addTarget(self, action: #selector(TDLikertScaleSelectorView.didPressSelectorBtn(sender:)), for: .touchUpInside)
