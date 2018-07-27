@@ -4,6 +4,8 @@
 
 This library provides a UI Control for displaying a Likert Scale question
 
+[![](https://github.com/elprl/TDLikertScaleSelectorView/raw/master/screenshot.png)](https://github.com/elprl/TDLikertScaleSelectorView/raw/master/screenshot.png)
+
 ## Features
 
 - [x] Ability to ask a Likert Scale question
