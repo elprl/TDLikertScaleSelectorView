@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 
 open class TDLikertScaleSelectorView : UIView {
-    let stackView = UIStackView()
+    var stackView : UIStackView!
+    
     var buildConfig: TDSelectionBuildConfig?
     var delegate: TDLikertScaleDelegate?
 
@@ -34,33 +35,29 @@ open class TDLikertScaleSelectorView : UIView {
     }
     
     func initViews() {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.isUserInteractionEnabled = true
-        
-        self.addSubview(stackView)
-
+        stackView = UIStackView(frame: CGRect.zero)
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
-        stackView.backgroundColor = .blue
+        stackView.alignment = .center
+        stackView.spacing = 0
         
         TDSelectionCategory.allCases.forEach { cat in
-            let containerView = TDSelectionContainerView(frame: CGRect.zero, category: cat, config: buildConfig)
+            let containerView = TDSelectionContainerView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), category: cat, config: buildConfig)
             containerView.button.addTarget(self, action: #selector(TDLikertScaleSelectorView.didPressSelectorBtn(sender:)), for: .touchUpInside)
-            containerView.translatesAutoresizingMaskIntoConstraints = false
             stackView.addArrangedSubview(containerView)
         }
+        
+        self.addSubviewForAutoLayout(stackView)
     }
     
     func setupConstraints() {
         // stackView
-        stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        stackView.pin(to: self)        
     }
     
     @objc func didPressSelectorBtn(sender: UIButton) {
-        delegate?.didSelect(category: TDSelectionCategory.category(fromTag: sender.tag))
+        if let category = TDSelectionCategory(rawValue: sender.tag) {
+            delegate?.didSelect(category: category)
+        }
     }
 }

@@ -8,50 +8,28 @@
 
 import Foundation
 
-public enum TDSelectionCategory: String, CaseIterable {
-    case stronglyAgree = "strongly agree"
-    case agree = "agree"
-    case neutral = "neutral"
-    case disagree = "disagree"
-    case stronglyDisagree = "strongly disagree"
+public enum TDSelectionCategory: Int, CaseIterable {
+    case stronglyAgree = 0
+    case agree = 1
+    case neutral = 2
+    case disagree = 3
+    case stronglyDisagree = 4
     
     var localizedName: String {
         get {
-            return NSLocalizedString(self.rawValue, comment: "Localised text for selection")
-        }
-    }
-    
-    var buttonTag: Int {
-        get {
             switch self {
             case .stronglyAgree:
-                return 0
+                return NSLocalizedString("strongly agree", comment: "Localised text for selection")
             case .agree:
-                return 1
+                return NSLocalizedString("agree", comment: "Localised text for selection")
             case .neutral:
-                return 2
+                return NSLocalizedString("neutral", comment: "Localised text for selection")
             case .stronglyDisagree:
-                return 3
+                return NSLocalizedString("disagree", comment: "Localised text for selection")
             case .disagree:
-                return 4
+                return NSLocalizedString("strongly disagree", comment: "Localised text for selection")
             }
         }
     }
-    
-    static func category(fromTag tag: Int) -> TDSelectionCategory {
-        switch tag {
-        case 0:
-            return .stronglyAgree
-        case 1:
-            return .agree
-        case 2:
-            return .neutral
-        case 3:
-            return .stronglyDisagree
-        case 4:
-            return .disagree
-        default:
-            return .stronglyAgree
-        }
-    }
+   
 }

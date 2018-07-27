@@ -29,6 +29,9 @@
 		DAE498C1210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */; };
 		DAE498C2210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */; };
 		DAE498C3210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */; };
+		DAE498C6210B9F41000282CA /* TDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C5210B9F41000282CA /* TDUtils.swift */; };
+		DAE498C7210B9F41000282CA /* TDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C5210B9F41000282CA /* TDUtils.swift */; };
+		DAE498C8210B9F41000282CA /* TDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE498C5210B9F41000282CA /* TDUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,7 @@
 		DAE498B4210B3CA2000282CA /* TDRoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDRoundButton.swift; sourceTree = "<group>"; };
 		DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSelectionContainerView.swift; sourceTree = "<group>"; };
 		DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDSelectionBuildConfig.swift; sourceTree = "<group>"; };
+		DAE498C5210B9F41000282CA /* TDUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +153,10 @@
 		DAE498AF210B1CEB000282CA /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DAE498C4210B477D000282CA /* ViewContainer */,
-				DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */,
 				DAE498B2210B236F000282CA /* TDSelectionCategory.swift */,
 				DAE498C0210B4762000282CA /* TDSelectionBuildConfig.swift */,
+				DAE498B0210B2313000282CA /* TDLikertScaleSelectorView.swift */,
+				DAE498C4210B477D000282CA /* ViewContainer */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -160,6 +164,7 @@
 		DAE498C4210B477D000282CA /* ViewContainer */ = {
 			isa = PBXGroup;
 			children = (
+				DAE498C5210B9F41000282CA /* TDUtils.swift */,
 				DAE498B4210B3CA2000282CA /* TDRoundButton.swift */,
 				DAE498BC210B4388000282CA /* TDSelectionContainerView.swift */,
 			);
@@ -298,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE498B3210B236F000282CA /* TDSelectionCategory.swift in Sources */,
+				DAE498C6210B9F41000282CA /* TDUtils.swift in Sources */,
 				DAE498BD210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
 				DAE498B5210B3CA2000282CA /* TDRoundButton.swift in Sources */,
 				DAE49884210B1CB1000282CA /* ViewController.swift in Sources */,
@@ -315,6 +321,7 @@
 				DAE498BA210B3CA9000282CA /* TDLikertScaleSelectorView.swift in Sources */,
 				DAE49897210B1CB3000282CA /* TDLikertScaleSelectorTests.swift in Sources */,
 				DAE498BE210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
+				DAE498C7210B9F41000282CA /* TDUtils.swift in Sources */,
 				DAE498B8210B3CA6000282CA /* TDSelectionCategory.swift in Sources */,
 				DAE498C2210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */,
 			);
@@ -328,6 +335,7 @@
 				DAE498BB210B3CAA000282CA /* TDLikertScaleSelectorView.swift in Sources */,
 				DAE498A2210B1CB3000282CA /* TDLikertScaleSelectorUITests.swift in Sources */,
 				DAE498BF210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
+				DAE498C8210B9F41000282CA /* TDUtils.swift in Sources */,
 				DAE498B9210B3CA6000282CA /* TDSelectionCategory.swift in Sources */,
 				DAE498C3210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */,
 			);
