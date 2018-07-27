@@ -40,18 +40,18 @@ struct MyBuildConfig: TDSelectionBuildConfig {
         var borderWidth: CGFloat? = 2.0
         var buttonRadius: CGFloat? = 22
         var lineColor: UIColor? = .purple
-    }
+}
     
-     if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
-            likertView.delegate = self
-            likertView.tag = 2
-            self.view.addSubviewForAutoLayout(likertView)
-            NSLayoutConstraint.activate([
-                likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-                likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-                likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-                ])
-        }
+if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
+    likertView.delegate = self
+    likertView.tag = 2
+    self.view.addSubviewForAutoLayout(likertView)
+    NSLayoutConstraint.activate([
+        likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+        likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+        likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
+        likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
+}
 
 ```
