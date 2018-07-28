@@ -1,6 +1,9 @@
 # TDLikertScaleSelectorView
 
 [![Build Status](http://img.shields.io/travis/elprl/TDLikertScaleSelectorView/master.svg?style=flat)](https://travis-ci.org/elprl/TDLikertScaleSelectorView)
+[![Version](https://img.shields.io/cocoapods/v/TDLikertScaleSelectorView.svg?style=flat)](http://cocoapods.org/pods/TDLikertScaleSelectorView)
+[![Platform](https://img.shields.io/cocoapods/p/TDLikertScaleSelectorView.svg?style=flat)](http://cocoapods.org/pods/TDLikertScaleSelectorView)
+[![License](https://img.shields.io/cocoapods/l/TDLikertScaleSelectorView.svg?style=flat)](https://github.com/elprl/TDLikertScaleSelectorView/blob/master/LICENSE)
 
 This library provides a UI Control for displaying a Likert Scale question
 
