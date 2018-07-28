@@ -20,7 +20,10 @@ This library provides a UI Control for displaying a Likert Scale question
 - Xcode 10 beta 4 or later
 
 ## How To Use
-The `TDLikertScaleSelectorView` class is the main UIView class containing the answer options / selections. You can add the UIView through code as shown below, or through Interface Builder. Implement a concrete class or struct of the `TDSelectionBuildConfig` protocol to skin / theme the controls to your needs.
+The library is all the Swift files in the `Source` folder. You can just drag and drop those files into your project or use the cocoapod `pod 'TDLikertScaleSelectorView'`.
+
+The `TDLikertScaleSelectorView` class is the main UIView class containing the answer options / selections. You can add the UIView through code as shown below, or through Interface Builder. Implement a concrete class or struct of the `TDSelectionBuildConfig` protocol to skin / theme the controls to your needs. Clone the entire project to see demo use - the main storyboard and viewcontroller shows how to use the library. 
+
 
 ```swift
 import TDLikertScaleSelectorView
