@@ -3,9 +3,9 @@ osx_image: xcode9.4
 xcode_sdk: iphonesimulator11.4
 sudo: required
 install:
-- wget https://swift.org/builds/swift-4.2-branch/xcode/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a-osx.pkg
-- sudo installer -pkg swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a-osx.pkg -target /
-- export PATH="/Library/Developer/Toolchains/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a.xctoolchain/usr/bin:$PATH"
+- wget https://swift.org/builds/swift-4.2-branch/xcode/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a-osx.pkg
+- sudo installer -pkg swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a-osx.pkg -target /
+- export PATH="/Library/Developer/Toolchains/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-05-30-a.xctoolchain/usr/bin:$PATH"
 script:
 - swift --version
 - swift package update
