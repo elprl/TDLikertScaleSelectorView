@@ -20,7 +20,7 @@ This library provides a UI Control for displaying a Likert Scale question
 - Xcode 10 beta 4 or later
 
 ## How To Use
-
+The `TDLikertScaleSelectorView` class is the main UIView class containing the answer options / selections. You can add the UIView through code as shown below, or through Interface Builder. Implement a concrete class or struct of the `TDSelectionBuildConfig` protocol to skin / theme the controls to your needs.
 
 ```swift
 import TDLikertScaleSelectorView
@@ -41,13 +41,7 @@ struct MyBuildConfig: TDSelectionBuildConfig {
 if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
     likertView.delegate = self
     likertView.tag = 1 // could be question number
-    self.view.addSubviewForAutoLayout(likertView)
-    NSLayoutConstraint.activate([
-        likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-        likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-        likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 200),
-        likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-    ])
+    self.view.addSubview(likertView)
 }
 
 extension ViewController: TDLikertScaleDelegate {
