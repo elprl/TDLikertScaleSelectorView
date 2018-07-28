@@ -1,7 +1,15 @@
-language: objective-c
+language: swift
 osx_image: xcode9.4
 xcode_sdk: iphonesimulator11.4
+sudo: required
+install:
+- wget https://swift.org/builds/swift-4.2-branch/xcode/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a-osx.pkg
+- sudo installer -pkg swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a-osx.pkg -target /
+- export PATH="/Library/Developer/Toolchains/swift-4.2-DEVELOPMENT-SNAPSHOT-2018-07-27-a.xctoolchain/usr/bin:$PATH"
 script:
+- swift --version
+- swift package update
+- swift test
 - xcodebuild -version
 - xcodebuild -project TDLikertScaleSelectorView.xcodeproj -scheme TDLikertScaleSelectorViewTests -sdk iphonesimulator -destination "OS=11.4,name=iPhone 8" -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test
 - xcodebuild -project TDLikertScaleSelectorView.xcodeproj -scheme TDLikertScaleSelectorViewUITests -sdk iphonesimulator -destination "OS=11.4,name=iPhone 8" -configuration Release ONLY_ACTIVE_ARCH=YES -enableCodeCoverage YES test
