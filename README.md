@@ -44,7 +44,8 @@ struct MyBuildConfig: TDSelectionBuildConfig {
     var buttonRadius: CGFloat? = 22
     var lineColor: UIColor? = .purple
 }
-    
+
+var config = MyBuildConfig()
 if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
     likertView.delegate = self
     likertView.tag = 1 // could be question number

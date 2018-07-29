@@ -34,17 +34,17 @@ class ViewController: UIViewController {
         }
         
         var config = MyBuildConfig()
-        if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
-            likertView.delegate = self
-            likertView.tag = 2
-            self.view.addSubviewForAutoLayout(likertView)
-            NSLayoutConstraint.activate([
-                likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-                likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 275),
-                likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-                ])
-        }
+        let likertView = TDLikertScaleSelectorView(withConfig: config)
+        likertView.delegate = self
+        likertView.tag = 2
+        self.view.addSubviewForAutoLayout(likertView)
+        NSLayoutConstraint.activate([
+            likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 275),
+            likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+            ])
+        
         
         config.backgroundColorSelected = UIColor.brown
         config.backgroundColorNormal = UIColor.lightGray
@@ -52,17 +52,16 @@ class ViewController: UIViewController {
         config.lineColor = UIColor.clear
         config.borderColor = UIColor.clear
 
-        if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
-            likertView.delegate = self
-            likertView.tag = 3
-            self.view.addSubviewForAutoLayout(likertView)
-            NSLayoutConstraint.activate([
-                likertView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-                likertView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-                likertView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 420),
-                likertView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-                ])
-        }
+        let likertView2 = TDLikertScaleSelectorView(withConfig: config)
+        likertView2.delegate = self
+        likertView2.tag = 3
+        self.view.addSubviewForAutoLayout(likertView2)
+        NSLayoutConstraint.activate([
+            likertView2.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            likertView2.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            likertView2.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 420),
+            likertView2.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+            ])
     }
 }
 

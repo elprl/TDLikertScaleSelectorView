@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol TDSelectionBuildConfig {
+public protocol TDSelectionBuildConfig {
     var font: UIFont? { get }
     var textColor: UIColor? { get }
     

@@ -39,14 +39,14 @@ open class ExampleTableView: UITableViewController {
             return cell
         case 1:
             let cell = UITableViewCell(style: .default, reuseIdentifier: "answerCellId")
-            if let likertView = TDLikertScaleSelectorView(withConfig: styleConfig, frame: CGRect.zero) {
-                likertView.delegate = self
-                likertView.tag = indexPath.row
-                likertView.clipsToBounds = true
-                cell.contentView.addSubviewForAutoLayout(likertView)
-                likertView.pin(to: cell.contentView, withPadding: 10)
-                return cell
-            }
+            cell.selectionStyle = .none
+            let likertView = TDLikertScaleSelectorView(withConfig: styleConfig)
+            likertView.delegate = self
+            likertView.tag = indexPath.row
+            likertView.clipsToBounds = true
+            cell.contentView.addSubviewForAutoLayout(likertView)
+            likertView.pin(to: cell.contentView, withPadding: 10)
+            return cell
         case 2:
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cellId")
             cell.textLabel?.text = "Q2. A trained monkey could do better."
@@ -55,14 +55,14 @@ open class ExampleTableView: UITableViewController {
             styleConfig.buttonRadius = 15
             styleConfig.font = UIFont.boldSystemFont(ofSize: 14)
             let cell = UITableViewCell(style: .default, reuseIdentifier: "answerCellId")
-            if let likertView = TDLikertScaleSelectorView(withConfig: styleConfig, frame: CGRect.zero) {
-                likertView.delegate = self
-                likertView.tag = indexPath.row
-                likertView.clipsToBounds = true
-                cell.contentView.addSubviewForAutoLayout(likertView)
-                likertView.pin(to: cell.contentView, withPadding: 10)
-                return cell
-            }
+            cell.selectionStyle = .none
+            let likertView = TDLikertScaleSelectorView(withConfig: styleConfig)
+            likertView.delegate = self
+            likertView.tag = indexPath.row
+            likertView.clipsToBounds = true
+            cell.contentView.addSubviewForAutoLayout(likertView)
+            likertView.pin(to: cell.contentView, withPadding: 10)
+            return cell
         case 4:
             let cell = UITableViewCell(style: .default, reuseIdentifier: "cellId")
             cell.textLabel?.text = "Q3. There was no COLLUSION with Russia."
@@ -72,14 +72,14 @@ open class ExampleTableView: UITableViewController {
             styleConfig.font = UIFont.boldSystemFont(ofSize: 8)
             styleConfig.backgroundColorSelected = .purple
             let cell = UITableViewCell(style: .default, reuseIdentifier: "answerCellId")
-            if let likertView = TDLikertScaleSelectorView(withConfig: styleConfig, frame: CGRect.zero) {
-                likertView.delegate = self
-                likertView.tag = indexPath.row
-                likertView.clipsToBounds = true
-                cell.contentView.addSubviewForAutoLayout(likertView)
-                likertView.pin(to: cell.contentView, withPadding: 10)
-                return cell
-            }
+            cell.selectionStyle = .none
+            let likertView = TDLikertScaleSelectorView(withConfig: styleConfig)
+            likertView.delegate = self
+            likertView.tag = indexPath.row
+            likertView.clipsToBounds = true
+            cell.contentView.addSubviewForAutoLayout(likertView)
+            likertView.pin(to: cell.contentView, withPadding: 10)
+            return cell
         default:
             return UITableViewCell()
         }
@@ -98,7 +98,7 @@ open class ExampleTableView: UITableViewController {
 }
 
 extension ExampleTableView: TDLikertScaleDelegate {
-    func didSelect(category cat: TDSelectionCategory, tag: Int) {
+    public func didSelect(category cat: TDSelectionCategory, tag: Int) {
         print("Question with tag \(tag) has answer \(cat.localizedName)")
     }
 }

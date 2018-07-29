@@ -43,17 +43,4 @@ class TDLikertScaleSelectorViewTests: XCTestCase {
         XCTAssertEqual(TDSelectionCategory.disagree.rawValue, 3, "has the correct name")
         XCTAssertEqual(TDSelectionCategory.stronglyDisagree.rawValue, 4, "has the correct name")
     }
-    
-    func testStackHasCorrectButtons() {
-        XCTAssertEqual(viewClass.stackView.arrangedSubviews.count, 5, "has the correct number of options")
-
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
