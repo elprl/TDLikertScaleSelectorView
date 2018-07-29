@@ -46,11 +46,11 @@ struct MyBuildConfig: TDSelectionBuildConfig {
 }
 
 var config = MyBuildConfig()
-if let likertView = TDLikertScaleSelectorView(withConfig: config, frame: CGRect.zero) {
-    likertView.delegate = self
-    likertView.tag = 1 // could be question number
-    self.view.addSubview(likertView)
-}
+let likertView = TDLikertScaleSelectorView(withConfig: config)
+likertView.delegate = self
+likertView.tag = 1 // could be question number
+self.view.addSubview(likertView)
+
 
 extension ViewController: TDLikertScaleDelegate {
     func didSelect(category cat: TDSelectionCategory, tag: Int) {
