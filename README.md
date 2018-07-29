@@ -18,6 +18,7 @@ This library provides a UI Control for displaying a Likert Scale question
 
 ## Requirements
 
+- Swift 4.2 required
 - iOS 11.0 or later
 - macOS 10.13 or later
 - Xcode 10 beta 4 or later
