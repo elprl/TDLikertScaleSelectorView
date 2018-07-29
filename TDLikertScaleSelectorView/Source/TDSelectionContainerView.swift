@@ -42,12 +42,16 @@ open class TDSelectionContainerView: UIView {
     }
     
     func initViews() {
+        self.accessibilityIdentifier = "TDSelectionContainerView\(self.tag)"
+
         label = UILabel()
+        label.isUserInteractionEnabled = false
         label.text = category?.localizedName
         label.font = buildConfig?.font ?? UIFont.systemFont(ofSize: 16.0)
         label.textColor = buildConfig?.textColor ?? .black
         label.textAlignment = .center
         label.numberOfLines = 2
+        label.accessibilityIdentifier = "answerLabel\(self.tag)"
 
         button = TDRoundButton(type: .roundedRect)
         button.backgroundColorNormal = buildConfig?.backgroundColorNormal ?? .blue
@@ -56,10 +60,14 @@ open class TDSelectionContainerView: UIView {
         button.backgroundColorSelected = buildConfig?.backgroundColorSelected ?? .lightGray
         button.borderColor = buildConfig?.borderColor ?? .black
         button.borderWidth = buildConfig?.borderWidth ?? 2.0
-        button.tag = category?.rawValue ?? 0
+        button.tag = category?.rawValue ?? self.tag
+        button.accessibilityIdentifier = category?.localizedName ?? "answerButton\(button.tag)"
         
         lineLeft = UIView()
+        lineLeft.isUserInteractionEnabled = false
         lineRight = UIView()
+        lineRight.isUserInteractionEnabled = false
+
         switch category {
         case .some(.stronglyAgree):
             lineLeft.isHidden = true

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA87526A210CD5D000262729 /* ExampleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA875269210CD5D000262729 /* ExampleTableView.swift */; };
 		DAE49882210B1CB1000282CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE49881210B1CB1000282CA /* AppDelegate.swift */; };
 		DAE49884210B1CB1000282CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE49883210B1CB1000282CA /* ViewController.swift */; };
 		DAE49887210B1CB1000282CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE49885210B1CB1000282CA /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA875269210CD5D000262729 /* ExampleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTableView.swift; sourceTree = "<group>"; };
 		DAE4987E210B1CB1000282CA /* TDLikertScaleSelectorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDLikertScaleSelectorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE49881210B1CB1000282CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE49883210B1CB1000282CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA87526B210CD63000262729 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				DA875269210CD5D000262729 /* ExampleTableView.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
 		DAE49875210B1CB1000282CA = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE498AF210B1CEB000282CA /* Source */,
+				DA87526B210CD63000262729 /* Examples */,
 				DAE49881210B1CB1000282CA /* AppDelegate.swift */,
 				DAE49883210B1CB1000282CA /* ViewController.swift */,
 				DAE49885210B1CB1000282CA /* Main.storyboard */,
@@ -173,6 +184,7 @@
 				DAE4987A210B1CB1000282CA /* Sources */,
 				DAE4987B210B1CB1000282CA /* Frameworks */,
 				DAE4987C210B1CB1000282CA /* Resources */,
+				DA87526C210DBC2B00262729 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -289,6 +301,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DA87526C210DBC2B00262729 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# increment the build number (ie 115 to 116)\nbuildnum=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nif [[ \"${buildnum}\" == \"\" ]]; then\necho \"No build number in $plist\"\nexit 2\nfi\n\nif [ \"$CONFIGURATION\" = \"Release\" ]; then\nbuildnum=$(($buildnum + 1))\n/usr/libexec/Plistbuddy -c \"Set CFBundleVersion $buildnum\" \"${INFOPLIST_FILE}\"\necho \"Bumped build number to $buildnum\"\n\nVERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nNEWVERSIONSTRING=`echo $VERSIONNUM | awk -F \".\" '{print $1 \".\" $2 \".'$buildnum'\" }'`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $NEWVERSIONSTRING\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :PreferenceSpecifiers:1:DefaultValue $NEWVERSIONSTRING\" \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Settings.bundle/Root.plist\"\n\nfi;\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DAE4987A210B1CB1000282CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -299,6 +331,7 @@
 				DAE498BD210B4388000282CA /* TDSelectionContainerView.swift in Sources */,
 				DAE498B5210B3CA2000282CA /* TDRoundButton.swift in Sources */,
 				DAE49884210B1CB1000282CA /* ViewController.swift in Sources */,
+				DA87526A210CD5D000262729 /* ExampleTableView.swift in Sources */,
 				DAE49882210B1CB1000282CA /* AppDelegate.swift in Sources */,
 				DAE498C1210B4762000282CA /* TDSelectionBuildConfig.swift in Sources */,
 				DAE498B1210B2313000282CA /* TDLikertScaleSelectorView.swift in Sources */,

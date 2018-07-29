@@ -20,11 +20,15 @@ public extension UIView {
     }
     
     public func pin(to view: UIView) {
+        pin(to: view, withPadding: 0)
+    }
+    
+    public func pin(to view: UIView, withPadding padding: CGFloat = 0.0) {
         NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            topAnchor.constraint(equalTo: view.topAnchor),
-            bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            topAnchor.constraint(equalTo: view.topAnchor, constant: padding),
+            bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -padding)
             ])
     }
 }

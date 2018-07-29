@@ -29,17 +29,69 @@ class TDLikertScaleSelectorUITests: XCTestCase {
     }
 
 
-    func testUIExists() {
+    func testButtonsExists() {
+        let cell = XCUIApplication().tables.children(matching: .cell).element(boundBy: 1)
+        let button1 = cell.buttons["strongly agree"]
+        let button2 = cell.buttons["agree"]
+        let button3 = cell.buttons["neutral"]
+        let button4 = cell.buttons["disagree"]
+        let button5 = cell.buttons["strongly disagree"]
+
+        XCTAssertTrue(button1.exists)
+        XCTAssertTrue(button2.exists)
+        XCTAssertTrue(button3.exists)
+        XCTAssertTrue(button4.exists)
+        XCTAssertTrue(button5.exists)
+    }
+    
+    
+    func testButtonSelections() {
+        let cell = XCUIApplication().tables.children(matching: .cell).element(boundBy: 1)
+        let button1 = cell.buttons["strongly agree"]
+        let button2 = cell.buttons["agree"]
+        let button3 = cell.buttons["neutral"]
+        let button4 = cell.buttons["disagree"]
+        let button5 = cell.buttons["strongly disagree"]
         
+        XCTAssertFalse(button1.isSelected)
+        XCTAssertFalse(button2.isSelected)
+        XCTAssertFalse(button3.isSelected)
+        XCTAssertFalse(button4.isSelected)
+        XCTAssertFalse(button5.isSelected)
+
+        button1.tap()
+        XCTAssertTrue(button1.isSelected)
+        XCTAssertFalse(button2.isSelected)
+        XCTAssertFalse(button3.isSelected)
+        XCTAssertFalse(button4.isSelected)
+        XCTAssertFalse(button5.isSelected)
         
-        let element = XCUIApplication().otherElements.containing(.staticText, identifier:"1. This UI is awesome.").children(matching: .other).element(boundBy: 0).children(matching: .other).element
-        element.children(matching: .other).element(boundBy: 0).children(matching: .button).element.tap()
-        element.children(matching: .other).element(boundBy: 1).children(matching: .button).element.tap()
-        element.children(matching: .other).element(boundBy: 2).children(matching: .button).element.tap()
-        element.children(matching: .other).element(boundBy: 3).children(matching: .button).element.tap()
-        element.children(matching: .other).element(boundBy: 4).children(matching: .button).element.tap()
+        button2.tap()
+        XCTAssertFalse(button1.isSelected)
+        XCTAssertTrue(button2.isSelected)
+        XCTAssertFalse(button3.isSelected)
+        XCTAssertFalse(button4.isSelected)
+        XCTAssertFalse(button5.isSelected)
         
+        button3.tap()
+        XCTAssertFalse(button1.isSelected)
+        XCTAssertFalse(button2.isSelected)
+        XCTAssertTrue(button3.isSelected)
+        XCTAssertFalse(button4.isSelected)
+        XCTAssertFalse(button5.isSelected)
         
+        button4.tap()
+        XCTAssertFalse(button1.isSelected)
+        XCTAssertFalse(button2.isSelected)
+        XCTAssertFalse(button3.isSelected)
+        XCTAssertTrue(button4.isSelected)
+        XCTAssertFalse(button5.isSelected)
         
+        button5.tap()
+        XCTAssertFalse(button1.isSelected)
+        XCTAssertFalse(button2.isSelected)
+        XCTAssertFalse(button3.isSelected)
+        XCTAssertFalse(button4.isSelected)
+        XCTAssertTrue(button5.isSelected)
     }
 }

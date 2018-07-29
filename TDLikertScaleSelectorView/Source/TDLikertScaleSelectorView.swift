@@ -34,6 +34,8 @@ open class TDLikertScaleSelectorView : UIView {
     }
     
     func initViews() {
+        self.accessibilityIdentifier = "TDLikertScaleSelectorView"
+
         stackView = UIStackView(frame: CGRect.zero)
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
