@@ -13,7 +13,7 @@ open class TDLikertScaleSelectorView : UIView {
     public var stackView : UIStackView!
     
     var buildConfig: TDSelectionBuildConfig?
-    public var delegate: TDLikertScaleDelegate?
+    public weak var delegate: TDLikertScaleDelegate?
 
     private override init(frame: CGRect) {
         super.init(frame: frame)

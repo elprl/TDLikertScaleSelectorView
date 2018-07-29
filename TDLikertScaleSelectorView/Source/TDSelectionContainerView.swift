@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol TDLikertScaleDelegate {
+public protocol TDLikertScaleDelegate: NSObjectProtocol {
     func didSelect(category cat: TDSelectionCategory, tag: Int)
 }
 
