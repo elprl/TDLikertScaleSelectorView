@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 open class TDLikertScaleSelectorView : UIView {
-    var stackView : UIStackView!
+    public var stackView : UIStackView!
     
     var buildConfig: TDSelectionBuildConfig?
-    var delegate: TDLikertScaleDelegate?
+    public var delegate: TDLikertScaleDelegate?
 
     private override init(frame: CGRect) {
         super.init(frame: frame)

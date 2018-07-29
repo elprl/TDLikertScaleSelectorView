@@ -15,7 +15,7 @@ public enum TDSelectionCategory: Int, CaseIterable {
     case disagree = 3
     case stronglyDisagree = 4
     
-    var localizedName: String {
+    public var localizedName: String {
         get {
             switch self {
             case .stronglyAgree:
@@ -31,5 +31,4 @@ public enum TDSelectionCategory: Int, CaseIterable {
             }
         }
     }
-   
 }
