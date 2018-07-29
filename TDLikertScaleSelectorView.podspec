@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "TDLikertScaleSelectorView"
-  s.version       = "1.0.4"
+  s.version       = "1.0.5"
   s.summary       = "Likert Scale Question iOS UI"
   s.description   = "This library provides a UI Control for displaying a Likert Scale question"
 

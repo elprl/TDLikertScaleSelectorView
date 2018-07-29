@@ -22,7 +22,7 @@ open class TDSelectionContainerView: UIView {
     var lineLeft: UIView!
     var lineRight: UIView!
     
-    init(frame: CGRect, category: TDSelectionCategory?, config: TDSelectionBuildConfig?) {
+    public init(frame: CGRect, category: TDSelectionCategory?, config: TDSelectionBuildConfig?) {
         self.buildConfig = config
         self.category = category
         

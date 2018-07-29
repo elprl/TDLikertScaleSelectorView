@@ -26,7 +26,7 @@ open class TDLikertScaleSelectorView : UIView {
         setupConstraints()
     }
     
-    convenience init(withConfig config: TDSelectionBuildConfig? = nil, frame: CGRect = CGRect.zero) {
+    convenience public init(withConfig config: TDSelectionBuildConfig? = nil, frame: CGRect = CGRect.zero) {
         self.init(frame: frame)
         self.buildConfig = config
         initViews()
