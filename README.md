@@ -1,5 +1,6 @@
 # TDLikertScaleSelectorView
 
+[![Language](https://img.shields.io/badge/swift-4.2-green.svg)](https://swift.org)
 [![Build Status](http://img.shields.io/travis/elprl/TDLikertScaleSelectorView/master.svg?style=flat)](https://travis-ci.org/elprl/TDLikertScaleSelectorView)
 [![Version](https://img.shields.io/cocoapods/v/TDLikertScaleSelectorView.svg?style=flat)](http://cocoapods.org/pods/TDLikertScaleSelectorView)
 [![Platform](https://img.shields.io/cocoapods/p/TDLikertScaleSelectorView.svg?style=flat)](http://cocoapods.org/pods/TDLikertScaleSelectorView)
