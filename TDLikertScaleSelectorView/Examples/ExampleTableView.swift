@@ -83,9 +83,6 @@ open class ExampleTableView: UITableViewController {
         default:
             return UITableViewCell()
         }
-        
-        return UITableViewCell()
-
     }
 
     open override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
