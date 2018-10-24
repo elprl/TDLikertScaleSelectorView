@@ -17,6 +17,7 @@ This library provides a UI Control for displaying a Likert Scale question
 - [x] Ability to skin the UI with fonts, colours, etc
 - [x] Ability to add the control via Interface Builder or programmatically
 
+
 ## Requirements
 
 - Swift 4.2 required
